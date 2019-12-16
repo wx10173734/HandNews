@@ -1,0 +1,10 @@
+/node_modules/
+/build/
+/config/
+/dist/
+/src/static/
+/*.js
+/test/unit/coverage/
+/src/utils/
+/src/router/*.js
+

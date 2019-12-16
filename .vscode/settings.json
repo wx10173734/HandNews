@@ -1,0 +1,274 @@
+// 将设置放入此文件中以覆盖默认设置
+{
+  // 调整窗口的缩放级别。原始大小是 0，每次递增(例如 1)或递减(例如 -1)表示放大或缩小 20%。也可以输入小数以便以更精细的粒度调整缩放级别。
+  "window.zoomLevel": 0,
+  "window.title": "${activeEditorShort}${separator}${rootPath}",
+  "editor.tabSize": 2,
+  // 以像素为单位控制字号。
+  "editor.fontSize": 14,
+  // 控制行高。使用 0 通过字号计算行高。
+  // "editor.fontFamily": "Source Code pro",
+  // "editor.fontFamily": "Bitstream Vera Sans Mono",
+  // "editor.fontFamily": "Input Mono"
+  "editor.lineHeight": 0,
+  // 显示垂直标尺的列
+  "editor.rulers": [
+    120
+  ],
+  // 控制折行方式。可以选择：
+  // - “off” （禁用折行），
+  // - “on” （视区折行），
+  // - “wordWrapColumn”（在“editor.wordWrapColumn”处折行
+  // - “bounded”（在视区与“editor.wordWrapColumn”两者的较小者处折行）。
+  "editor.wordWrap": "off",
+  // 在 "editor.wordWrap" 为 "wordWrapColumn" 或 "bounded" 时控制编辑器列的换行。
+  "editor.wordWrapColumn": 120,
+  // 控制编辑器中呈现空白字符的方式，可能为“无none”、“边界boundary”和“全部all”。“边界boundary”选项不会在单词之间呈现单空格。
+  //"editor.renderWhitespace": "all",
+  "editor.renderWhitespace": "all",
+  // 控制编辑器是否应呈现控制字符
+  "editor.renderControlCharacters": true,
+  // 控制编辑器是否应呈现缩进参考线
+  "editor.renderIndentGuides": false,
+  // 控制是否显示 minimap
+  //"editor.minimap.enabled": true,
+  //"editor.minimap.renderCharacters": false,
+  // 在 "editor.wordWrap" 为 "wordWrapColumn" 或 "bounded" 时控制编辑器列的换行。
+  //"editor.wordWrapColumn": 120,
+  // 控制编辑器是否应在键入后自动设置行的格式
+  "editor.formatOnType": false,
+  // 保存时设置文件的格式。格式化程序必须可用，不能自动保存文件，并且不能关闭编辑器。
+  // 为了避免和 eslint 冲突，讲编辑器默认的代码检查规则关闭（如果开启了）
+  "editor.formatOnSave": false,
+  "javascript.format.enable": false,
+  // 当其前缀匹配时插入代码段。当 "quickSuggestions" 未启用时，效果最佳。
+  "editor.tabCompletion": "on",
+  //控制光标动画样式：blink,smooth,phase,expand,solid
+  "editor.cursorBlinking": "smooth",
+  "editor.codeLens": true,
+  "editor.snippetSuggestions": "top",
+  // 启用后，将在保存文件时剪裁尾随空格。
+  "files.trimTrailingWhitespace": true,
+  // 指定工作台中使用的颜色主题。
+  //"workbench.colorTheme": "Dracula Soft",
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/dist": true
+  },
+  /*
+    EMMET配置
+  */
+  // 启用后，按下 TAB 键，将展开 Emmet 缩写。
+  "emmet.triggerExpansionOnTab": true,
+  // 自动识别文件类型
+  "emmet.syntaxProfiles": {
+    // "javascript": "jsx",
+    "vue": "html",
+    "wpy": "html",
+    "vue-html": "html"
+  },
+  "git.confirmSync": false,
+  /**
+  CSScomb
+  */
+  //// One of the predefined configs (csscomb, yandex, zen) or custom config (object) or path to config.
+  //"csscomb.preset": "yandex",
+  "csscomb.preset": {
+    "always-semicolon": true,
+    "color-case": "lower",
+    "block-indent": "    ",
+    "color-shorthand": true,
+    "element-case": "lower",
+    "eof-newline": false,
+    "leading-zero": false,
+    "quotes": "double",
+    "sort-order-fallback": "abc",
+    "space-before-colon": "",
+    "space-after-colon": " ",
+    "space-before-combinator": " ",
+    "space-after-combinator": " ",
+    "space-between-declarations": "",
+    "space-before-opening-brace": "",
+    "space-after-opening-brace": "",
+    "space-after-selector-delimiter": " ",
+    "space-before-selector-delimiter": "",
+    "space-before-closing-brace": "",
+    "tab-size": true
+  },
+  /**
+  Beautify config
+  */
+  "beautify.config": {
+    "key": "option+command+b",
+    "command": "HookyQR.beautify",
+    "when": "editorFocus",
+    "indent_size": 2,
+    "css": {
+      "indent_size": 2
+    }
+  },
+  //Beautify css/sass/scss/less
+  // "beautify.tabSize": 2,
+  // "beautify.options": {
+  //   "indent_size": 2,
+  //   "indent_char": " ",
+  //   "indent_with_tabs": false,
+  //   //"eol": "\n",
+  //   "eol": "",
+  //   "end_with_newline": false,
+  //   "indent_level": 0,
+  //   "preserve_newlines": true,
+  //   "max_preserve_newlines": 10,
+  //   "space_in_paren": false,
+  //   "space_in_empty_paren": false,
+  //   "jslint_happy": false,
+  //   "space_after_anon_function": false,
+  //   "brace_style": "collapse",
+  //   "unindent_chained_methods": false,
+  //   "break_chained_methods": false,
+  //   "keep_array_indentation": false,
+  //   "unescape_strings": false,
+  //   "wrap_line_length": 0,
+  //   "e4x": false,
+  //   "comma_first": false,
+  //   "operator_position": "before-newline"
+  // },
+
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressResultsExplorerNotice": false,
+    "suppressShowKeyBindingsNotice": true,
+    "suppressUpdateNotice": false,
+    "suppressWelcomeNotice": true
+  },
+  // Live Server插件配置
+  "liveServer.settings.port": 5500,
+  "liveServer.settings.root": "./",
+  // highlight-matching-tag插件配置
+  // Should self-closing tags be highlighted
+  "highlight-matching-tag.highlightSelfClosing": true,
+  // 主题
+  "workbench.colorTheme": "Comfy Monokai(Italic)",
+  // 文件图标
+  "workbench.iconTheme": "material-icon-theme",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "gitlens.keymap": "alternate",
+  "material-icon-theme.showUpdateMessage": false,
+  // ESlint配置
+  "files.associations": {
+    "*.vue": "vue",
+    "*.wpy": "vue",
+    // "*.vue": "html"
+  },
+  // vetur设置
+  // 选择 vue 文件中 template 的格式化工具
+  "vetur.format.defaultFormatter.html": "prettyhtml",
+  // "vetur.format.defaultFormatter.html": "js-beautify-html",
+  "vetur.format.defaultFormatter.js": "vscode-typescript",
+  "vetur.format.defaultFormatter.ts": "vscode-typescript",
+  // vetur 的自定义设置
+  "vetur.format.defaultFormatterOptions": {
+    "prettier": {
+      "singleQuote": true,
+      "semi": false
+    }
+  },
+  // prettier 设置语句末尾不加分号
+  "prettier.semi": false,
+  // prettier 设置强制单引号
+  "prettier.singleQuote": true,
+  // eslint设置
+  // "editor.formatOnSave": false,
+  // 设置 eslint 保存时自动修复
+  "eslint.autoFixOnSave": true,
+  "standard.autoFixOnSave": true,
+  // eslint 检测文件类型
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "vue-html",
+    {
+      "language": "html",
+      "autoFix": true
+    },
+    {
+      "language": "vue",
+      "autoFix": true
+    }
+  ],
+  // "standard.validate": [
+  //   "javascript",
+  //   "javascriptreact",
+  //   "vue-html",
+  //   {
+  //     "language": "html",
+  //     "autoFix": true
+  //   },
+  //   {
+  //     "language": "vue",
+  //     "autoFix": true
+  //   }
+  // ],
+  "eslint.options": {
+    "plugins": [
+      "html"
+    ],
+    "extensions": [
+      ".js",
+      ".jsx",
+      ".vue",
+      ".wpy",
+      ".html"
+    ]
+  },
+  // "standard.options": {
+  //   "plugins": [
+  //     "html"
+  //   ],
+  //   "extensions": [
+  //     ".js",
+  //     ".jsx",
+  //     ".vue",
+  //     ".wpy",
+  //     ".html"
+  //   ]
+  // },
+  "gitlens.historyExplorer.enabled": true,
+  // 打开默认终端
+  // "openInTerminal.app": "Terminal"
+  // "openInTerminal.app": "iTerm",
+  // 根据活动编辑器控制窗口标题。变量基于上下文进行替换:
+  // - `${activeEditorShort}`: 文件名 (如 myFile.txt)。
+  // - `${activeEditorMedium}`: 相对于工作区文件夹的文件路径 (如 myFolder/myFile.txt)。
+  // - `${activeEditorLong}`: 文件的完整路径 (如 /Users/Development/myProject/myFolder/myFile.txt)。
+  // - `${folderName}`: 文件所在工作区文件夹名称 (如 myFolder)。
+  // - `${folderPath}`: 文件所在工作区文件夹路径 (如 /Users/Development/myFolder)。
+  // - `${rootName}`: 工作区名称 (如 myFolder 或 myWorkspace)。
+  // - `${rootPath}`: 工作区路径 (如 /Users/Development/myWorkspace)。
+  // - `${appName}`: 如 VS Code。
+  // - `${dirty}`: 活动编辑器有更新时显示的更新指示器。
+  // - `${separator}`: 仅在被有值变量或静态文本包围时显示的分隔符 (" - ")。
+  "sync.removeExtensions": true,
+  "sync.syncExtensions": true,
+  // 开启 vscode 文件路径导航
+  "breadcrumbs.enabled": true,
+  "prettier.printWidth": 120,
+  "prettier.disableLanguages": [
+    "vue",
+    "javascript"
+  ],
+  "prettier.jsxBracketSameLine": true,
+  // 箭头函数形参是否添加括号
+  // avoid 尽可能省略，always 总是添加
+  "prettier.arrowParens": "always",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "java.jdt.ls.vmargs": "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -javaagent:\"/Users/afarwind/.vscode/extensions/gabrielbb.vscode-lombok-0.9.8/server/lombok.jar\"",
+  "editor.formatOnPaste": false
+}
