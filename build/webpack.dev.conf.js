@@ -8,7 +8,7 @@ const BaseWebpackConfig = require('./webpack.base.conf')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder') // 端口查看工具包
-const Visualizer = require('webpack-visualizer-plugin')
+// const Visualizer = require('webpack-visualizer-plugin')
 // 模块分析
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
@@ -74,11 +74,11 @@ const DevWebpackConfig = merge(BaseWebpackConfig, {
         to: config.dev.assetsSubDirectory,
         ignore: ['.*']
       }
-    ]),
+    ])
     // 模块可视化统计
-    new Visualizer({
-      filename: '../page/state.html'
-    }),
+    // new Visualizer({
+    //   filename: '../page/state.html'
+    // }),
     // 模块可视化统计
     // new BundleAnalyzerPlugin({
     //   analyzerPort: 8889
