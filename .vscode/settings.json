@@ -5,7 +5,7 @@
   "window.title": "${activeEditorShort}${separator}${rootPath}",
   "editor.tabSize": 2,
   // 以像素为单位控制字号。
-  "editor.fontSize": 14,
+  "editor.fontSize": 13,
   // 控制行高。使用 0 通过字号计算行高。
   // "editor.fontFamily": "Source Code pro",
   // "editor.fontFamily": "Bitstream Vera Sans Mono",
@@ -270,5 +270,8 @@
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "java.jdt.ls.vmargs": "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -javaagent:\"/Users/afarwind/.vscode/extensions/gabrielbb.vscode-lombok-0.9.8/server/lombok.jar\"",
-  "editor.formatOnPaste": false
+  "editor.formatOnPaste": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }

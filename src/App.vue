@@ -11,7 +11,7 @@ export default {
   },
   data () {
     return {
-      test: '文本数据渲染！！！'
+      test: '脚手架启动成功！！！'
     }
   }
 }

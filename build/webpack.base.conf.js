@@ -16,7 +16,7 @@ function resolve (dir) {
 }
 
 const createLintingRule = () => ({
-  test: /\.(js|vue|ts)$/,
+  test: /\.(js|vue)$/,
   loader: 'eslint-loader',
   enforce: 'pre',
   include: [resolve('src'), resolve('test')],
@@ -165,8 +165,7 @@ module.exports = {
       filename: 'index.html',
       template: resolve('public/index.html'),
       inject: true,
-      favicon: resolve('public/favicon.ico'),
-      title: 'vue-element-admin'
+      favicon: resolve('public/favicon.ico')
     }),
     new MiniCssExtractPlugin({
       filename: utils.assetsPath('css/[name].[contenthash].css'),
