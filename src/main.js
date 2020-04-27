@@ -3,15 +3,15 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store'
+import '@/assets/stylesheets/base.css'
+import 'font-awesome/css/font-awesome.min.css'
 
-// 设置为 false 以阻止 vue 在启动时生成生产提示。
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
-const vm = new Vue({
-  el: '#app',
-  router: router,
+new Vue({
+  router,
+  store,
   render: h => h(App)
-})
-
-Vue.use({ vm })
+}).$mount("#app")

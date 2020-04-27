@@ -1,29 +1,27 @@
 <template>
-  <div id="app" v-text="test">
+  <div class="container">
+    <router-view v-if="isMobile"/>
+    <h1 v-else>请在手机端访问</h1>
   </div>
 </template>
 
 <script>
-
 export default {
   name: 'App',
-  components: {
-  },
-  data () {
-    return {
-      test: '脚手架启动成功！！！'
+  computed: {
+    isMobile () {
+      return document.body.clientWidth < 500
     }
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style scoped>
+  .container {
+    height: 100%;
+    user-select: none;
+  }
+  h1{
+    text-align: center;
+  }
 </style>

@@ -63,7 +63,7 @@ module.exports = {
         // 开发模式不分离，mini-css-extract-plugin不支持HMR，或者添加css-hot-loader来支持
         // extract: process.env.NODE_ENV === 'production'
       }),
-      ...(config.dev.useEslint ? [createLintingRule()] : []),
+      // ...(config.dev.useEslint ? [createLintingRule()] : []),
       {
         test: /\.vue$/,
         loader: 'vue-loader',
@@ -86,14 +86,14 @@ module.exports = {
       //     appendTsSuffixTo: [/\.vue$/]
       //   }
       // },
-      {
-        test: /\.svg$/,
-        loader: 'svg-sprite-loader',
-        include: [resolve('src/page/index/icons')], // include => 只处理指定的文件夹下的文件
-        options: {
-          symbolId: 'icon-[name]'
-        }
-      },
+      // {
+      //   test: /\.svg$/,
+      //   loader: 'svg-sprite-loader',
+      //   include: [resolve('src/page/index/icons')], // include => 只处理指定的文件夹下的文件
+      //   options: {
+      //     symbolId: 'icon-[name]'
+      //   }
+      // },
       // {
       //   test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
       //   loader: 'url-loader',
@@ -104,7 +104,7 @@ module.exports = {
       //   }
       // },
       {
-        test: /\.(gif|png|jpe?g)$/i, // 这里排出svg格式，因为会与svg-sprite-loader冲突
+        test: /\.(png|jpe?g|gif|svg)$/i, // 这里排出svg格式，因为会与svg-sprite-loader冲突
         use: [
           {
             loader: 'url-loader',

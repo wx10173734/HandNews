@@ -48,8 +48,8 @@ exports.cssLoaders = function (options) {
     if (options.extract) {
       loaders.unshift(MiniCssExtractPlugin.loader)
     } else {
-      // loaders.unshift('vue-style-loader')
-      loaders.unshift('style-loader')
+      loaders.unshift('vue-style-loader')
+      // loaders.unshift('style-loader')
     }
 
     if (options.hotReload) {
